@@ -1,2 +1,6 @@
 # TextViewProblem
 UITextView with selected text covered by popover shows selection grab handle in popover
+
+I'm working on an app for iPad that includes some text editing in a UITextView. I have a toolbar over the textview with buttons that can be used to modify the text, such as font, font size, bold, italics, etc. When the user taps the Font button in the toolbar, a popover view controller (not full screen) appears below the button with a list of fonts to choose from. My problem is that when I select text that starts at the left edge of the textview and then tap the font button in my toolbar, the left selection grab handle appears in my popover. Worse yet, I can drag the grab handle and change the selection but can't see what the selection is because it's covered by the popover. Even more odd is that the left selection grab handle has to be before the first character on any line of text in the textview. If I move the left grab handle to the right one or more characters and tap the Font button, I don't see the grab handle in the popover.
+
+I assumed I was doing something wrong but after days of playing with this I'm beginning to think this is a bug in the SDK. I was able to reproduce this with this very simple project that includes a button over a textview and a popover view controller, so there's nothing exotic about my code.
